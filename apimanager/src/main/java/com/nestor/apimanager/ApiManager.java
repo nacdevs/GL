@@ -10,7 +10,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.nestor.apimanager.Clases.ApiData;
 import com.nestor.apimanager.Clases.Item;
 
 
@@ -26,10 +25,7 @@ public class ApiManager {
     private RequestQueue mRequestQueue;
     private Context context;
     private static ApiManager instance;
-    public Map params;
-    public int amount;
     private String mSERVER = "https://private-f0eea-mobilegllatam.apiary-mock.com/";
-    private int id;
 
     public static ApiManager getInstance(Context context){
             if(instance == null){
@@ -42,7 +38,6 @@ public class ApiManager {
     public ApiManager(Context context){
         this.context = context;
         mRequestQueue = Volley.newRequestQueue(context);
-        params = new HashMap();
     }
 
 
